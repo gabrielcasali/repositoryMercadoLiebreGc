@@ -12,9 +12,5 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
-  },
-  "scripts": {
-    "test":"nodemon src/index.js",
-    "start": "node src/index.js"
   }
 }
