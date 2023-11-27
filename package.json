@@ -4,13 +4,17 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test":"nodemon src/index.js",
-    "start": "node src/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "Gabriel Casali",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "scripts": {
+    "test":"nodemon src/index.js",
+    "start": "node src/index.js"
   }
 }
