@@ -18,4 +18,6 @@ app.get('/register',(req, res)=>{
 app.get('/login',(req, res) =>{
     res.sendFile(__dirname+'/views/login.html')
 });
-app.post('')
+app.listen(PORT, ()=>{
+    console.log(`Servidor funcionando en el puerto ${PORT}`);
+});
