@@ -5,8 +5,8 @@ const app = express();
 
 app.use(express.static('public'));
 // Levantando el servidor en el puerto 3000
-const port=process.env.PORT || 3001;
-
+const port=process.env.PORT||3001;
+package-lock.json
 
 app.get('/',(req,res) => {
     res.sendfile((require('path')).resolve('./views/home.html'))
