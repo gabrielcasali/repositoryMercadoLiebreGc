@@ -6,11 +6,11 @@ const app = express();
 
 app.use(express.static('public'));
 // Levantando el servidor en el puerto 3000
-const port=process.env.PORT (3001);
-app.listen(3001, ()=>{
-    app.listen(port, ()=>
-        console.log(`Servidor funcionando en el puerto ${PORT}`));
-    });
+const port=process.env.PORT || 3000;
+
+app.listen(PORT, ()=>{
+    console.log(`Servidor funcionando en el puerto ${PORT}`);
+});
 app.get('/',(req,res) => {
     res.sendfile((require('path')).resolve('./views/home.html'))
 });
