@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.static('public'));
 // Levantando el servidor en el puerto 3000
-const port=process.env.PORT || 3000;
+const port=process.env.PORT || 3001;
 
 
 app.get('/',(req,res) => {
@@ -17,6 +17,6 @@ app.get('/register',(req, res)=>{
 app.get('/login',(req, res) =>{
     res.sendFile(__dirname+'/views/login.html')
 });
-app.listen(PORT, ()=>{
+app.listen(port, ()=>{
     console.log(`Servidor funcionando en el puerto ${PORT}`);
 });
