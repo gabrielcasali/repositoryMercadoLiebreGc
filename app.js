@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 app.use(express.static('public'));
 const fs = require('fs');
-
+const path = require('path');
 // Cargar el contenido de package.json
 const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
 const PORT = process.env.PORT || 3001;
-const path = require('path');
+
 app.get('/', (req,res)=>{
     res.sendfile(__dirname + 'views/home.html');
 });
