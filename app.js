@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 app.use(express.static('public'));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 
 app.get('/home', (req,res)=>{
@@ -18,7 +18,7 @@ app.get('/register', (req,res)=>{
 });
 
 app.listen(PORT, ()=>{
-    console.log(`Servidor funcionando en el puerto ${PORT}`);
+    console.log(`Servidor funcionando en el puerto 3001`);
 });
 const fs = require('fs');
 
