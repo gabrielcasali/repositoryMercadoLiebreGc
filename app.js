@@ -1,19 +1,26 @@
-const express = require ('express');
-const path = require ('path') ;
-
+const express = require('express');
 const app = express();
-
 app.use(express.static('public'));
-// Levantando el servidor en el puerto 3000
-const port=process.env.PORT||3001;
-package.json
 
-app.get('/',(req,res) => {
-    res.sendfile((require('path')).resolve('./views/home.html'))
+const PORT = process.env.PORT || 3000;
+
+
+app.get('/', (req,res)=>{
+    res.sendFile(__dirname + 'views\home.html');
 });
-app.get('/register',(req, res)=>{
-    res.sendFile(__dirname + '/views/register.html')
+
+app.get('/login', (req,res)=>{
+    res.sendFile(__dirname + 'views\login.html');
 });
-app.get('/login',(req, res) =>{
-    res.sendFile(__dirname+'/views/login.html')
+
+app.get('/register', (req,res)=>{
+    res.sendFile(__dirname + 'views\register.html');
 });
+
+app.listen(PORT, ()=>{
+    console.log(`Servidor funcionando en el puerto ${PORT}`);
+});
+const fs = require('fs');
+
+// Cargar el contenido de package.json
+const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
