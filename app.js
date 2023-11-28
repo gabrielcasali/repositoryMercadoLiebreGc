@@ -18,7 +18,7 @@ app.get('/register', (req,res)=>{
 });
 
 app.listen(PORT, ()=>{
-    console.log(`Servidor funcionando en el puerto 3001`);
+    console.log(`Servidor funcionando en el puerto ${PORT}`);
 });
 const fs = require('fs');
 
