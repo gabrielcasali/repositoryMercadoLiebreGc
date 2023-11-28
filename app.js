@@ -8,7 +8,7 @@ const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
 const PORT = process.env.PORT || 3001;
 
-app.get('/') = homedir
+app.get('/') = homedir;
 const homedir = app.get('/home', (req,res)=>{
     res.sendFile(__dirname + 'views\home.html');
 });
