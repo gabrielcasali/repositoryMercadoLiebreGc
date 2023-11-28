@@ -4,10 +4,10 @@ const path = require('path');
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static('public'));
-const fs = require('fs');
+//const fs = require('fs');
 
 // Cargar el contenido de package.json
-const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+//const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
 
 app.get('/', (req,res)=>{
