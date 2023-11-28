@@ -6,15 +6,15 @@ const PORT = process.env.PORT || 3000;
 
 
 app.get('/home', (req,res)=>{
-    res.sendFile(__dirname + 'views\home.html');
+    res.sendFile(__dirname + 'views/home.html');
 });
 
 app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + 'views\login.html');
+    res.sendFile(__dirname + 'views/login.html');
 });
 
 app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + 'views\register.html');
+    res.sendFile(__dirname + 'views/register.html');
 });
 
 app.listen(PORT, ()=>{
