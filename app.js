@@ -5,7 +5,7 @@ app.use(express.static('public'));
 const PORT = process.env.PORT || 3001;
 
 
-app.get('/home', (req,res)=>{
+app.get('/', (req,res)=>{
     res.sendFile(__dirname + 'views/home.html');
 });
 
