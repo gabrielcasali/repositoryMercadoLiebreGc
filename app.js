@@ -8,13 +8,13 @@ const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
 const PORT = process.env.PORT || 3001;
 
-
-app.get('/', (req,res)=>{
-    res.sendFile(__dirname + 'views/home.html');
+app.get('/') = homedir
+const homedir = app.get('/home', (req,res)=>{
+    res.sendFile(__dirname + 'views\home.html');
 });
 
 app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + 'views/login.html');
+    res.sendFile(__dirname + 'views\login.html');
 });
 
 app.get('/register', (req,res)=>{
