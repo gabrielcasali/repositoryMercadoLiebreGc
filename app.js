@@ -7,9 +7,9 @@ const fs = require('fs');
 const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
 const PORT = process.env.PORT || 3001;
-
+const path = require('path');
 app.get('/', (req,res)=>{
-    res.send(__dirname + 'views/home.html');
+    res.sendfile(__dirname + 'views/home.html');
 });
 
 app.get('/login', (req,res)=>{
