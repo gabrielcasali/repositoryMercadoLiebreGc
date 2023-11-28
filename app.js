@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 app.use(express.static('public'));
+const fs = require('fs');
+
+// Cargar el contenido de package.json
+const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
 const PORT = process.env.PORT || 3001;
 
@@ -20,7 +24,3 @@ app.get('/register', (req,res)=>{
 app.listen(PORT, ()=>{
     console.log(`Servidor funcionando en el puerto ${PORT}`);
 });
-const fs = require('fs');
-
-// Cargar el contenido de package.json
-const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
