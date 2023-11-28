@@ -8,11 +8,17 @@ const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
 const PORT = process.env.PORT || 3001;
 
-app.get('/') = homedir;
-const homedir = app.get('/home', (req,res)=>{
+app.get('/', (req, res) => {
+    const homedir = os.homedir();
+    // Ahora, puedes utilizar homedir como una función si es una función
+    const resultado = homedir();  // Ejemplo de ejecutar homedir como función
     res.sendFile(__dirname + 'views\home.html');
 });
-
+//app.get('/') = homedir;
+//const homedir = app.get('/home', (req,res)=>{
+//    res.sendFile(__dirname + 'views\home.html');
+//});
+//
 app.get('/login', (req,res)=>{
     res.sendFile(__dirname + 'views\login.html');
 });
