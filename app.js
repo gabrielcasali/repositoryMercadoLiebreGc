@@ -6,7 +6,7 @@ const path = require('path');
 // Cargar el contenido de package.json
 const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 app.get('/', (req,res)=>{
     res.sendfile(__dirname + 'views/home.html');
