@@ -11,15 +11,15 @@ app.use(express.static('public'));
 
 
 app.get('/', (req,res)=>{
-    res.sendfile(__dirname + './views/home.html');
+    res.sendfile(path.resolve + './views/home.html');
 })
 
 app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + './views/login.html');
+    res.sendFile(path.resolve + './views/login.html');
 })
 
 app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + './views/register.html');
+    res.sendFile(path.resolve + './views/register.html');
 })
 
 app.listen(PORT, ()=>{
